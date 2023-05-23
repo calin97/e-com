@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  height: 50px;
+  border: 1px solid black;
+  background-image: linear-gradient(to right, #aff1da, #f9ea8f);
+}
+
+.div-header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div-svg {
+  display: flex;
+  height: 50px;
+  width: 55px;
+  padding: 0 10px;
+  justify-content: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.btn-header {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 2px solid #21e065;
+  color: #fff;
+  background-color: #21e065;
+  padding: 8px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px,
+    rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px;
+  font-weight: 800;
+  font-size: 12px;
+  height: 42px;
+}
+.btn-header:hover {
+  background: 0 0;
+  color: #21e065;
+}

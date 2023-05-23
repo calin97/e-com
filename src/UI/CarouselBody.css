@@ -1,0 +1,19 @@
+.div-container-carousel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  /* position: relative; */
+}
+
+.div-carousel {
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+}
+
+.img-positioning {
+  object-fit: fill;
+  max-height: 600px !important;
+  min-height: 65px;
+}

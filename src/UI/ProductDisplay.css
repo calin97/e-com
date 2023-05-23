@@ -1,0 +1,48 @@
+.product-container {
+  margin-top: 30px;
+}
+
+.img-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all;
+  display: flex;
+}
+
+.img-wrapper {
+  display: flex;
+  height: 250px;
+  width: 250px;
+  border: solid 1px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.img-wrapper > .product-img {
+  height: 50%;
+  width: 50%;
+  transition: transform 0.5s;
+  margin: auto;
+}
+
+.product-img:hover {
+  transform: scale(1.5);
+}
+
+.text {
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  text-align: center;
+  font-size: small;
+}
+
+.text > .text-description {
+  text-align: left;
+}
+
+.text > .text-price {
+  font-weight: bold;
+}

@@ -3,11 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import WelcomePage from './Components/welcomePage';
+import LoginPage from './Components/LoginPage';
+import SignUpPage from './Components/SignUpPage';
+import { Toaster } from 'react-hot-toast';
+import DashBoard from './Components/DashBoard';
+
+
+const router = createBrowserRouter([
+  { path: '/', element: <WelcomePage /> },
+  { path: '/login', element: <LoginPage /> },
+  { path: '/sign-up', element: <SignUpPage /> },
+  { path: '/products', element: <DashBoard /> }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Toaster position='top-center' />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
