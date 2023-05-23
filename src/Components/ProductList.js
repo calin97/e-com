@@ -55,6 +55,7 @@ function ProductList({ searchText, dropDownSelectedValues }) {
                     description={product.description}
                 />
             ))}
+            <div>da</div>
 
         </div>
     )
