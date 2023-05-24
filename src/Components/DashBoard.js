@@ -5,18 +5,19 @@ import { useState } from "react";
 import Dropdown from "./DropDown";
 import Logo from '../Img/Logo.jpg'
 import '../UI/Header.css'
+import '../UI/DashBoard.css'
+import Header from "./welcomePageComp/Header";
+
 
 
 
 function DashBoard() {
     const [searchText, setSearchText] = useState('')
     const [dropDownSelectedValues, setDropDownSelectedValues] = useState([])
-    const navigate = useNavigate()
 
 
-    const backToWelcomePage = () => {
-        navigate('/')
-    }
+
+
 
     const options = [
         { value: "men's clothing", label: "men's clothing" },
@@ -29,26 +30,25 @@ function DashBoard() {
     return (
         <>
 
-            <div className="container">
+            <Header />
 
-                <Dropdown className='dropdown' isMulti isSearchable placeHolder={<svg viewBox="0 0 100 80" width="35" height="30">
-                    <rect width="75" height="10"></rect>
-                    <rect y="30" width="100" height="10"></rect>
-                    <rect y="60" width="100" height="10"></rect>
-                </svg>} options={options} onChange={(value) => setDropDownSelectedValues(value)} />
-                <div className="div-header">
+            <div className="div-container">
 
-                    <div>
-                        <img className="div-svg" src={Logo} alt={Logo} />
-                    </div>
+                <Dropdown isMulti isSearchable placeHolder='Categories' options={options} onChange={(value) => setDropDownSelectedValues(value)} />
 
 
-                    <SearchBar searchText={searchText} setSearchText={setSearchText} />
-                    <div className="btn-container">
-                        <button className="btn-header" type="button" onClick={backToWelcomePage}>LogOut</button>
-                    </div>
-                </div>
+
+
+                <SearchBar searchText={searchText} setSearchText={setSearchText} />
+
+
             </div>
+
+
+
+
+
+
 
 
 

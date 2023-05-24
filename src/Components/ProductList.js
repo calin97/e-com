@@ -1,6 +1,7 @@
 import Product from "./Product";
 import { useState, useEffect, useMemo } from "react";
 import { toast } from "react-hot-toast";
+// import '../UI/ProductDisplay.css'
 
 
 function ProductList({ searchText, dropDownSelectedValues }) {
@@ -45,7 +46,7 @@ function ProductList({ searchText, dropDownSelectedValues }) {
 
 
     return (
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+        <div className="products-container">
             {displaySeachedProducts.map((product) => (
                 <Product
                     key={product.id}
@@ -55,7 +56,6 @@ function ProductList({ searchText, dropDownSelectedValues }) {
                     description={product.description}
                 />
             ))}
-            <div>da</div>
 
         </div>
     )

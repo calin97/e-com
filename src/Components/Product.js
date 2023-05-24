@@ -14,9 +14,9 @@ function Product({ title, price, imageUrl, description }) {
 
                 <div className='text'>
                     <h3>{title}</h3>
-                    <p className='text-description'>Description: {description}</p>
+                    {/* <p className='text-description'>Description: {description}</p> */}
                     <p className='text-price'>Price: ${price}</p>
-                    <button>add to cart</button>
+                    <button className='cart-button'>add to cart</button>
                 </div>
             </div>
         </>

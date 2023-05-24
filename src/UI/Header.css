@@ -1,8 +1,12 @@
-.container {
+.header-container {
+  position: fixed;
   display: flex;
+  width: 100%;
   height: 50px;
   border: 1px solid black;
   background-image: linear-gradient(to right, #aff1da, #f9ea8f);
+  z-index: 50;
+  top: 0;
 }
 
 .div-header {
@@ -45,4 +49,26 @@
 .btn-header:hover {
   background: 0 0;
   color: #21e065;
+}
+
+.nav-link-container {
+  display: flex;
+  cursor: pointer;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.nav-link {
+  color: #83764f;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #ff6d60;
+}
+
+.nav-link.active {
+  color: #ff6d60;
 }
