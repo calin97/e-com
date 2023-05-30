@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate, NavLink } from "react-router-dom";
 import Logo from '../../Img/Logo.jpg'
+import HeaderCartButton from "../HeaderCartButton";
+import CartModal from "../CartModal";
+import { useOutsideClick } from "../../Hooks/onCloseModalCart";
 
 
-function Header() {
+function Header({ selectedProducts }) {
+    const [isCartVisible, setIsCartVisible] = useState(false)
 
 
     const navigate = useNavigate()
@@ -26,19 +30,10 @@ function Header() {
     const username = JSON.parse(localStorage.getItem("account"))
 
 
-
-
-
-    // conditional DISPLAY HEADER!!!!!!!!!!!!
-
-
-
-
-
-
     return (
         <>
 
+            {isCartVisible && <CartModal selectedProducts={selectedProducts} setIsCartVisible={setIsCartVisible} />}
 
             <div className="header-container">
 
@@ -71,10 +66,13 @@ function Header() {
                     {username ?
                         //logged IN
 
+                        <>
+                            <div className="btn-container">
+                                <button className="btn-header" type="button" onClick={backToWelcomePage}>LogOut</button>
+                            </div>
+                            <HeaderCartButton setIsCartVisible={setIsCartVisible} />
+                        </>
 
-                        <div className="btn-container">
-                            <button className="btn-header" type="button" onClick={backToWelcomePage}>LogOut</button>
-                        </div>
 
 
 

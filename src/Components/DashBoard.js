@@ -7,6 +7,7 @@ import Logo from '../Img/Logo.jpg'
 import '../UI/Header.css'
 import '../UI/DashBoard.css'
 import Header from "./welcomePageComp/Header";
+import CartModal from "./CartModal";
 
 
 
@@ -14,6 +15,7 @@ import Header from "./welcomePageComp/Header";
 function DashBoard() {
     const [searchText, setSearchText] = useState('')
     const [dropDownSelectedValues, setDropDownSelectedValues] = useState([])
+    const [selectedProducts, setSelectedProducts] = useState([])
 
 
 
@@ -29,30 +31,26 @@ function DashBoard() {
 
     return (
         <>
+            <div className="main-container">
+                <Header />
 
-            <Header />
+                <div className="div-container">
 
-            <div className="div-container">
-
-                <Dropdown isMulti isSearchable placeHolder='Categories' options={options} onChange={(value) => setDropDownSelectedValues(value)} />
-
-
+                    <Dropdown isMulti isSearchable placeHolder='Categories' options={options} onChange={(value) => setDropDownSelectedValues(value)} />
 
 
-                <SearchBar searchText={searchText} setSearchText={setSearchText} />
+
+
+                    <SearchBar searchText={searchText} setSearchText={setSearchText} />
+
+
+                </div>
+
+
+                <ProductList searchText={searchText} dropDownSelectedValues={dropDownSelectedValues} selectedProducts={selectedProducts} />
 
 
             </div>
-
-
-
-
-
-
-
-
-
-            <ProductList searchText={searchText} dropDownSelectedValues={dropDownSelectedValues} />
 
         </>
     )

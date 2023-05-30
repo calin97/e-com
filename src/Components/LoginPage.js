@@ -69,7 +69,7 @@ function LoggedInPage() {
 
     const authLogin = () => {
         let exists = Object.values(accounts).find((account) => account.username === values.username && account.password === values.password)
-        console.log(exists);
+
 
         if (exists) {
             toast.success('You successfully logged in')

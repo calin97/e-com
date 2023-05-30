@@ -4,7 +4,7 @@ import { toast } from "react-hot-toast";
 // import '../UI/ProductDisplay.css'
 
 
-function ProductList({ searchText, dropDownSelectedValues }) {
+function ProductList({ searchText, dropDownSelectedValues, selectedProducts }) {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -50,10 +50,13 @@ function ProductList({ searchText, dropDownSelectedValues }) {
             {displaySeachedProducts.map((product) => (
                 <Product
                     key={product.id}
+                    productId={product.id}
                     title={product.title}
                     price={product.price}
                     imageUrl={product.image}
                     description={product.description}
+                    selectedProducts={selectedProducts}
+
                 />
             ))}
 
