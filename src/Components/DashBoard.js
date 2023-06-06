@@ -8,6 +8,7 @@ import '../UI/Header.css'
 import '../UI/DashBoard.css'
 import Header from "./welcomePageComp/Header";
 import CartModal from "./CartModal";
+import Footer from "./Footer";
 
 
 
@@ -51,6 +52,9 @@ function DashBoard() {
 
 
             </div>
+
+            <Footer />
+
 
         </>
     )

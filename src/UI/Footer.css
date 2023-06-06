@@ -1,0 +1,98 @@
+.footer-wrapper {
+  margin-top: 40px;
+  padding: 25px;
+  background-color: black;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+/* LOGO ADRESS SECTION */
+
+.logo-address-conatiner {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}
+
+.img-logo-footer {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.adress-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 25px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* USEFUL LINKS */
+
+.links-container {
+}
+
+.links-footer-conainter {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* PRODUCTS CATEGORY */
+
+.desc-stayintouch {
+  width: 200px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.products-category {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* stay in touch section */
+
+.footer-socials {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  /* margin-right: 80px; */
+}
+
+.footer-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27px;
+}

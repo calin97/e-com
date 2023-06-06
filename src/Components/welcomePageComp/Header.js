@@ -3,7 +3,7 @@ import { useNavigate, NavLink } from "react-router-dom";
 import Logo from '../../Img/Logo.jpg'
 import HeaderCartButton from "../HeaderCartButton";
 import CartModal from "../CartModal";
-import { useOutsideClick } from "../../Hooks/onCloseModalCart";
+import '../../UI/Header.css'
 
 
 function Header({ selectedProducts }) {
@@ -37,7 +37,7 @@ function Header({ selectedProducts }) {
 
             <div className="header-container">
 
-                <div className="div-header">
+                <div className="div-header-left">
 
                     <div>
                         <img className="div-svg" src={Logo} alt={Logo} />
@@ -63,23 +63,24 @@ function Header({ selectedProducts }) {
                         </nav>
                     </div>
 
+                </div>
+
+                <div className="div-header-right">
+
                     {username ?
                         //logged IN
 
                         <>
+                            <HeaderCartButton className="btn-cart" setIsCartVisible={setIsCartVisible} />
                             <div className="btn-container">
                                 <button className="btn-header" type="button" onClick={backToWelcomePage}>LogOut</button>
                             </div>
-                            <HeaderCartButton setIsCartVisible={setIsCartVisible} />
+
                         </>
-
-
-
 
                         :
 
                         //LOGGED OUT
-
                         <>
                             {/* <div>welcome, {username}</div> */}
 
@@ -90,15 +91,10 @@ function Header({ selectedProducts }) {
                                 <button className="btn-header" type='button' onClick={goToSignUpPage}>SignUp</button>
                             </div>
 
-
-
-
-
                         </>
-
                     }
-
                 </div>
+
             </div>
 
         </>

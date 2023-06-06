@@ -1,4 +1,5 @@
 import Header from "./welcomePageComp/Header"
+import Footer from "./Footer"
 
 
 
@@ -10,6 +11,8 @@ function AboutUs() {
             <Header />
 
             <div>about us page</div>
+            <Footer />
+
         </>
     )
 }

@@ -21,11 +21,15 @@ function HeaderCartButton({ setIsCartVisible }) {
     }
 
     return <button onClick={openCartHandler} className={classes.button}>
-        <span className={classes.icon}>
-            <CartIcon />
-        </span>
-        <span>Your Cart</span>
-        <span className={classes.badge}>{numbOfCartItems}</span>
+        <div className={classes.cartWrapper}>
+
+            <span className={classes.icon}>
+                <CartIcon />
+            </span>
+            <span className={classes.badge}>
+                <span className={classes.cartItemsNum}>{numbOfCartItems}</span>
+            </span>
+        </div>
     </button>
 }
 

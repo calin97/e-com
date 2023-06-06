@@ -14,6 +14,7 @@ import SingleProduct from './Components/SingleProduct'
 import CartProvider from './Context/CartProvider';
 
 
+
 const router = createBrowserRouter([
   { path: '/', element: <WelcomePage /> },
   { path: '/login', element: <LoginPage /> },
