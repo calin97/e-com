@@ -9,20 +9,29 @@ import LoginPage from './Components/LoginPage';
 import SignUpPage from './Components/SignUpPage';
 import { Toaster } from 'react-hot-toast';
 import DashBoard from './Components/DashBoard';
+import AboutUs from './Components/Aboutus';
+import SingleProduct from './Components/SingleProduct'
+import CartProvider from './Context/CartProvider';
+
 
 
 const router = createBrowserRouter([
   { path: '/', element: <WelcomePage /> },
   { path: '/login', element: <LoginPage /> },
   { path: '/sign-up', element: <SignUpPage /> },
-  { path: '/products', element: <DashBoard /> }
+  { path: '/:products', element: <DashBoard /> },
+  { path: '/about-us', element: <AboutUs /> },
+  { path: '/:single-product', element: < SingleProduct /> }
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Toaster position='top-center' />
-    <RouterProvider router={router} />
+    <CartProvider >
+
+      <RouterProvider router={router} />
+    </CartProvider>
   </React.StrictMode>
 );
 

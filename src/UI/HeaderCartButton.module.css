@@ -1,0 +1,83 @@
+.button {
+  cursor: pointer;
+  font: inherit;
+  border: none;
+  /* background-color: #a2a378; */
+  /* color: white; */
+  /* padding: 0.75rem 3rem; */
+  padding: 3px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+/* .button:hover,
+.button:active {
+  background-color: #83764f;
+} */
+
+.cartWrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: transparent;
+  gap: 100px;
+}
+
+.icon {
+  width: 1.85rem;
+  height: 1.85rem;
+}
+
+.badge {
+  position: absolute;
+  display: flex;
+  background-color: #21e065;
+  border-radius: 25px;
+  /* height: 45%;
+  width: 45%; */
+  padding: 3px;
+  font-weight: bold;
+  top: -5px;
+  right: -10px;
+}
+
+.cartItemsNum {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  font-size: 10px;
+
+  /* height: 1px;
+  width: 70%; */
+}
+
+.button:hover .badge,
+.button:active .badge {
+  background-color: #ecb358;
+}
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

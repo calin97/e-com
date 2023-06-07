@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import '../UI/SearchBar.css'
 
 
@@ -16,17 +16,9 @@ function SearchBar({ searchText, setSearchText }) {
         <>
 
             <div>
-                <input class="search__input" type="text" placeholder="Search" onChange={searchBarHandler} value={searchText} />
+                <input className="search__input" type="text" placeholder="Search" onChange={searchBarHandler} value={searchText} />
             </div>
 
-
-
-            {/* <div >
-                <div>
-                    <input className="input" type="text" placeholder="type to search" onChange={searchBarHandler} value={searchText} />
-                </div>
-                <span></span>
-            </div> */}
         </>
     )
 

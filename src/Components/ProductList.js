@@ -1,9 +1,10 @@
 import Product from "./Product";
 import { useState, useEffect, useMemo } from "react";
 import { toast } from "react-hot-toast";
+// import '../UI/ProductDisplay.css'
 
 
-function ProductList({ searchText, dropDownSelectedValues }) {
+function ProductList({ searchText, dropDownSelectedValues, selectedProducts }) {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -45,17 +46,19 @@ function ProductList({ searchText, dropDownSelectedValues }) {
 
 
     return (
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr' }}>
+        <div className="products-container container-default">
             {displaySeachedProducts.map((product) => (
                 <Product
                     key={product.id}
+                    productId={product.id}
                     title={product.title}
                     price={product.price}
                     imageUrl={product.image}
                     description={product.description}
+                    selectedProducts={selectedProducts}
+
                 />
             ))}
-            <div>da</div>
 
         </div>
     )

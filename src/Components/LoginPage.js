@@ -66,16 +66,20 @@ function LoggedInPage() {
         fetchData();
     }, []);
 
+
     const authLogin = () => {
         let exists = Object.values(accounts).find((account) => account.username === values.username && account.password === values.password)
+
 
         if (exists) {
             toast.success('You successfully logged in')
             navigate('/products')
+            localStorage.setItem("account", JSON.stringify(exists.username));
+
         }
         else {
             toast.error('Username or password incorrect')
-            console.log('________________________');
+
         }
 
     }

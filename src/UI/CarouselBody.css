@@ -6,6 +6,10 @@
   /* position: relative; */
 }
 
+.carousel-wrapper {
+  margin: 0 !important;
+}
+
 .div-carousel {
   flex-direction: column;
   width: 50%;
