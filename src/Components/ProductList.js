@@ -46,7 +46,7 @@ function ProductList({ searchText, dropDownSelectedValues, selectedProducts }) {
 
 
     return (
-        <div className="products-container">
+        <div className="products-container container-default">
             {displaySeachedProducts.map((product) => (
                 <Product
                     key={product.id}

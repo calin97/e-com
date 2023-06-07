@@ -21,31 +21,10 @@ function Product({ productId, title, price, imageUrl, description, selectedProdu
     }
 
 
-    // const addToCartHandler = () => {
 
 
-    //     // // verifici (dupa id) daca produsul asta e deja in selectedProducts
-    //     // var indexOfProduct = selectedProducts.findIndex(product => {
-    //     //     console.log(product.productId);
-    //     //     console.log(selectedProducts);
-    //     //     return product.productId == productId
-
-    //     // })
 
 
-    //     // if (indexOfProduct !== -1) {
-    //     //     // daca e, maresti cantitatea - in selectedProducts
-    //     //     selectedProducts[indexOfProduct].quantity++
-    //     // } else {
-    //     //     // daca nu e, il adaugi
-    //     //     let product = { productId: productId, title: title, price: price, imageUrl: imageUrl, quantity: 1 }
-    //     //     selectedProducts.push(product)
-
-    //     // }
-
-
-    //     // console.log(selectedProducts);
-    // }
 
 
     return (

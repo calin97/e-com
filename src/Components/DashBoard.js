@@ -46,9 +46,9 @@ function DashBoard() {
 
 
                 </div>
-
-
                 <ProductList searchText={searchText} dropDownSelectedValues={dropDownSelectedValues} selectedProducts={selectedProducts} />
+
+
 
 
             </div>

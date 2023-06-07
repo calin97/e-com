@@ -36,65 +36,69 @@ function Header({ selectedProducts }) {
             {isCartVisible && <CartModal selectedProducts={selectedProducts} setIsCartVisible={setIsCartVisible} />}
 
             <div className="header-container">
+                <div className="container-default header-wrapper">
 
-                <div className="div-header-left">
+                    <div className="div-header-left">
 
-                    <div>
-                        <img className="div-svg" src={Logo} alt={Logo} />
+                        <div>
+                            <img className="div-svg" src={Logo} alt={Logo} />
+                        </div>
+
+
+                        <div>
+
+                            <nav className='nav-link-container'>
+
+                                <NavLink className='nav-link' to="/" >
+                                    Home
+                                </NavLink>
+
+                                <NavLink className='nav-link' to="/products" >
+                                    Products
+                                </NavLink>
+
+                                <NavLink className='nav-link' to="/about-us" >
+                                    About us
+                                </NavLink>
+
+                            </nav>
+                        </div>
+
                     </div>
 
+                    <div className="div-header-right">
 
-                    <div>
+                        {username ?
+                            //logged IN
 
-                        <nav className='nav-link-container'>
 
-                            <NavLink className='nav-link' to="/" >
-                                Home
-                            </NavLink>
+                            <>
+                                <HeaderCartButton className="btn-cart" setIsCartVisible={setIsCartVisible} />
+                                <div className="btn-container">
+                                    <button className="btn-header" type="button" onClick={backToWelcomePage}>LogOut</button>
+                                </div>
 
-                            <NavLink className='nav-link' to="/products" >
-                                Products
-                            </NavLink>
+                            </>
 
-                            <NavLink className='nav-link' to="/about-us" >
-                                About us
-                            </NavLink>
 
-                        </nav>
+                            :
+
+                            //LOGGED OUT
+                            <>
+                                {/* <div>welcome, {username}</div> */}
+
+
+                                <div className="btn-container">
+                                    <button className="btn-header" type='button' onClick={goToLoginPage}>Login</button>
+
+                                    <button className="btn-header" type='button' onClick={goToSignUpPage}>SignUp</button>
+                                </div>
+
+                            </>
+                        }
                     </div>
 
                 </div>
-
-                <div className="div-header-right">
-
-                    {username ?
-                        //logged IN
-
-                        <>
-                            <HeaderCartButton className="btn-cart" setIsCartVisible={setIsCartVisible} />
-                            <div className="btn-container">
-                                <button className="btn-header" type="button" onClick={backToWelcomePage}>LogOut</button>
-                            </div>
-
-                        </>
-
-                        :
-
-                        //LOGGED OUT
-                        <>
-                            {/* <div>welcome, {username}</div> */}
-
-
-                            <div className="btn-container">
-                                <button className="btn-header" type='button' onClick={goToLoginPage}>Login</button>
-
-                                <button className="btn-header" type='button' onClick={goToSignUpPage}>SignUp</button>
-                            </div>
-
-                        </>
-                    }
-                </div>
-
             </div>
 
         </>

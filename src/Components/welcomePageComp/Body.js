@@ -55,7 +55,7 @@ function BodyWelcomePage() {
 
                 {/* SECOND VIEW IN WELCOME PAGE */}
 
-                <div className='second-view-container'>
+                <div className='second-view-container container-default'>
                     <div className='img-text-wrapper'>
                         <div className='image-second-view-container'>
                             <img className='img-second-view' src={lifestyle} alt='lifestyle.jpg'></img>
@@ -81,48 +81,51 @@ function BodyWelcomePage() {
                 </div>
 
                 {/* why choose us section in second view homepage */}
-
-                <div className='wonder-wrapper'>
-                    <div className='wonder-element'>
-                        IF YOU WONDER
-
-                    </div>
-                    <div className='text-wonder'>
-                        Why choose us
-                    </div>
-
-                </div>
-                <div className='wonder-elements-wrapper'>
-                    <div className='element-container'>
-                        <figure className='wonder-figure'>
-                            <img src='https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/icon-04.png' alt='lazy'></img>
-                        </figure>
-                        <h6 className='wonder-title'>Big discounts</h6>
-                        <p className='wonder-text-desc'>Integer euismod blandit nunc sit amet sollicitudin. Fusce quis orci viverra, cursus justo.</p>
-                    </div>
-                    <div className='element-container'>
-                        <figure className='wonder-figure'>
-                            <img src='https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/icon-01.png' alt='lazy'></img>
-                        </figure>
-                        <h6 className='wonder-title'>Free Shipping</h6>
-                        <p className='wonder-text-desc'>Integer euismod blandit nunc sit amet sollicitudin. Fusce quis orci viverra, cursus justo.</p>
-                    </div>
-                    <div className='element-container'>
-                        <figure className='wonder-figure'>
-                            <img src='https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/icon-02.png' alt='lazy'></img>
-                        </figure>
-                        <h6 className='wonder-title'>Secure Payments</h6>
-                        <p className='wonder-text-desc'>Integer euismod blandit nunc sit amet sollicitudin. Fusce quis orci viverra, cursus justo.</p>
-                    </div>
-                    <div className='element-container'>
-                        <figure className='wonder-figure'>
-                            <img src='https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/icon-03.png' alt='lazy'></img>
-                        </figure>
-                        <h6 className='wonder-title'>Order Tracking</h6>
-                        <p className='wonder-text-desc'>Integer euismod blandit nunc sit amet sollicitudin. Fusce quis orci viverra, cursus justo.</p>
-                    </div>
+                <div className='container-default'>
 
 
+                    <div className='wonder-wrapper'>
+                        <div className='wonder-element'>
+                            IF YOU WONDER
+
+                        </div>
+                        <div className='text-wonder'>
+                            Why choose us
+                        </div>
+
+                    </div>
+                    <div className='wonder-elements-wrapper'>
+                        <div className='element-container'>
+                            <figure className='wonder-figure'>
+                                <img src='https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/icon-04.png' alt='lazy'></img>
+                            </figure>
+                            <h6 className='wonder-title'>Big discounts</h6>
+                            <p className='wonder-text-desc'>Integer euismod blandit nunc sit amet sollicitudin. Fusce quis orci viverra, cursus justo.</p>
+                        </div>
+                        <div className='element-container'>
+                            <figure className='wonder-figure'>
+                                <img src='https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/icon-01.png' alt='lazy'></img>
+                            </figure>
+                            <h6 className='wonder-title'>Free Shipping</h6>
+                            <p className='wonder-text-desc'>Integer euismod blandit nunc sit amet sollicitudin. Fusce quis orci viverra, cursus justo.</p>
+                        </div>
+                        <div className='element-container'>
+                            <figure className='wonder-figure'>
+                                <img src='https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/icon-02.png' alt='lazy'></img>
+                            </figure>
+                            <h6 className='wonder-title'>Secure Payments</h6>
+                            <p className='wonder-text-desc'>Integer euismod blandit nunc sit amet sollicitudin. Fusce quis orci viverra, cursus justo.</p>
+                        </div>
+                        <div className='element-container'>
+                            <figure className='wonder-figure'>
+                                <img src='https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/icon-03.png' alt='lazy'></img>
+                            </figure>
+                            <h6 className='wonder-title'>Order Tracking</h6>
+                            <p className='wonder-text-desc'>Integer euismod blandit nunc sit amet sollicitudin. Fusce quis orci viverra, cursus justo.</p>
+                        </div>
+
+
+                    </div>
                 </div>
 
                 <Footer />
