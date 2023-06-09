@@ -32,25 +32,36 @@ function DashBoard() {
 
     return (
         <>
-            <div className="main-container">
-                <Header />
-
-                <div className="div-container">
-
-                    <Dropdown isMulti isSearchable placeHolder='Categories' options={options} onChange={(value) => setDropDownSelectedValues(value)} />
+            <Header />
+            <div className="shopping-products-container">
+                <div className="main-dashbord-container container-default">
 
 
+                    <div className="drop-search-products-wrapper">
 
 
-                    <SearchBar searchText={searchText} setSearchText={setSearchText} />
+                        <div className="drop-search-container">
+
+                            <div className="dropdown-shop-wrapper">
+
+                                <Dropdown isMulti isSearchable placeHolder='Categories' options={options} onChange={(value) => setDropDownSelectedValues(value)} />
+
+                            </div>
+                            <div className="search-shop-wrapper">
+
+                                <SearchBar searchText={searchText} setSearchText={setSearchText} />
+
+                            </div>
+                        </div>
+
+
+                        <ProductList searchText={searchText} dropDownSelectedValues={dropDownSelectedValues} selectedProducts={selectedProducts} />
+                    </div>
+
+
 
 
                 </div>
-                <ProductList searchText={searchText} dropDownSelectedValues={dropDownSelectedValues} selectedProducts={selectedProducts} />
-
-
-
-
             </div>
 
             <Footer />

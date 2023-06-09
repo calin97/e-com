@@ -42,12 +42,15 @@ function CartModal({ selectedProducts, setIsCartVisible }) {
                 <div className="cart-modal" ref={myCloseRefModal}>
                     <h2 className=''>Cart Items</h2>
                     {/* {cartItems} */}
-                    {!hasItems ? <h3>No products selected, start shopping</h3> : cartItems}
-                    <div className='total'>
-                        <span >Total Amount</span>
-                        <span >{totalAmount}</span>
+                    {!hasItems ? <h3>No products in the cart.</h3> : cartItems}
+                    {!hasItems ? '' :
+                        <div className='total'>
 
-                    </div>
+                            <span className='total-text'>Subtotal: </span>
+
+                            <span className='total-amount'> {totalAmount}</span>
+
+                        </div>}
                     <div className='div-button'>
                         <button className='button' onClick={closeCartHandler}>Close</button>
                         {hasItems && <button className='button'>Order</button>}

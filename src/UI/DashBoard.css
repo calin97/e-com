@@ -1,7 +1,30 @@
-.div-container {
-  margin-top: 50px;
+.shopping-products-container {
   display: flex;
-  justify-content: space-evenly;
+  background-color: #fafafa;
+}
+
+.main-dashbord-container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: #f6ffde;
+  margin-bottom: 40px;
+}
+
+.drop-search-products-wrapper {
+  background-color: white;
+}
+
+.drop-search-container {
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropdown-shop-wrapper {
+  margin: 20px 0 0 20px;
+}
+
+.search-shop-wrapper {
+  margin: 20px 60px 0 0;
 }

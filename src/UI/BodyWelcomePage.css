@@ -320,6 +320,7 @@
 
 .wonder-elements-wrapper {
   display: flex;
+  margin-bottom: 80px;
   /* margin-left: 60px; */
 }
 
