@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #8a2b06;
+  border-bottom: 2px solid #f1c376;
   padding: 1rem 0;
   margin: 1rem 0;
 }
@@ -10,6 +10,14 @@
 .cart-item h2 {
   margin: 0 0 0.5rem 0;
   color: #363636;
+}
+
+.titleItem {
+  font-family: Monserat;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 18px;
 }
 
 .cart-item-img {
@@ -26,7 +34,7 @@
 
 .price {
   font-weight: bold;
-  color: #8a2b06;
+  color: black;
 }
 
 .actions {
@@ -44,8 +52,8 @@
   font: inherit;
   font-weight: bold;
   font-size: 1.25rem;
-  color: #8a2b06;
-  border: 1px solid #8a2b06;
+  color: #f1c376;
+  border: 1px solid grey;
   width: 3rem;
   text-align: center;
   border-radius: 6px;
@@ -57,6 +65,25 @@
 
 .cart-item button:hover,
 .cart-item button:active {
-  background-color: #8a2b06;
+  background-color: #f1c376;
   color: white;
+}
+
+.amount {
+  border: 1px solid grey;
+  /* position: fixed; */
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  margin: 0.25rem;
+  font-size: 15px;
+  /* width: 3rem; */
+  padding: 5px;
+  width: 30px;
+}
+
+.amount a {
+  display: flex;
+  align-items: center;
+  margin: auto;
 }
