@@ -1,12 +1,14 @@
 .dropdown-container {
   text-align: left;
-  border: 1px solid #ccc;
+  border: 1px solid #ababab;
   position: relative;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .dropdown-input {
   padding: 10px;
+  gap: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -26,6 +28,11 @@
   background-color: #fafafa;
   z-index: 99;
   /* background-image: linear-gradient(to right, #fafafa); */
+}
+
+.dropdown-tool {
+  display: flex;
+  margin-top: 3px;
 }
 
 .dropdown-item {

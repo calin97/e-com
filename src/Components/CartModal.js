@@ -3,6 +3,8 @@ import { useOutsideClick } from '../Hooks/onCloseModalCart';
 import CartContext from '../Context/CartContext';
 import { useContext, useEffect } from 'react';
 import CartItem from './CartItem';
+import { toast } from 'react-hot-toast';
+
 
 
 
@@ -24,6 +26,12 @@ function CartModal({ selectedProducts, setIsCartVisible }) {
 
     const cartItemAddHandler = item => {
         cartCtx.addItem({ ...item, amount: 1 })
+    }
+
+    const orderHandler = () => {
+        toast.success('You successfully placed the order!')
+        setIsCartVisible(false)
+
     }
 
 
@@ -53,7 +61,7 @@ function CartModal({ selectedProducts, setIsCartVisible }) {
                         </div>}
                     <div className='div-button'>
                         <button className='button' onClick={closeCartHandler}>Close</button>
-                        {hasItems && <button className='button'>Order</button>}
+                        {hasItems && <button className='button' onClick={orderHandler}>Order</button>}
                     </div>
 
                 </div>
